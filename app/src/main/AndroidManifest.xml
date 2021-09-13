@@ -23,6 +23,7 @@
         <activity android:name=".viewdraghelper.ViewDragHelperActivity" />
         <activity android:name=".velocitytracker.VelocitytrackerBaseActivity" />
         <activity android:name=".velocitytracker.VelocitytrackerActivity" />
+        <activity android:name=".check.CheckActivity" />
         
     </application>
 

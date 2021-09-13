@@ -6,6 +6,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.customview.check.CheckActivity;
 import com.example.customview.velocitytracker.VelocitytrackerActivity;
 import com.example.customview.viewdraghelper.ViewDragHelperActivity;
 import com.example.customview.viewpager.ViewPagerActivity;
@@ -28,5 +29,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void onVelocitytracker(View v) {
         startActivity(new Intent(this, VelocitytrackerActivity.class));
+    }
+    
+    public void onCheck(View v) {
+        startActivity(new Intent(this, CheckActivity.class));
     }
 }
