@@ -24,6 +24,8 @@
         <activity android:name=".velocitytracker.VelocitytrackerBaseActivity" />
         <activity android:name=".velocitytracker.VelocitytrackerActivity" />
         <activity android:name=".check.CheckActivity" />
+        <activity android:name=".textview.TextViewActivity" />
+        
         
     </application>
 
