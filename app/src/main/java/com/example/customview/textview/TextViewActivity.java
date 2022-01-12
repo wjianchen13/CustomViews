@@ -18,7 +18,6 @@ public class TextViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_textview);
         tvTest = findViewById(R.id.tv_test);
-        TextLine tl;
     }
 
     public void onTest1(View v) {
