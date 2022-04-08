@@ -7,6 +7,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.customview.check.CheckActivity;
+import com.example.customview.stroketextview.StrokeActivity;
 import com.example.customview.textview.TextViewActivity;
 import com.example.customview.velocitytracker.VelocitytrackerActivity;
 import com.example.customview.viewdraghelper.ViewDragHelperActivity;
@@ -38,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void onText(View v) {
         startActivity(new Intent(this, TextViewActivity.class));
+    }
+
+    public void onStroke(View v) {
+        startActivity(new Intent(this, StrokeActivity.class));
     }
     
 }

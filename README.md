@@ -9,6 +9,8 @@ viewdraghelper基本使用，手势拖动view处理
 # velocitytracker
 velocitytracker简单测试  
 
+# stroketextview
+描边TextView，主要解决描边字体靠边被截取描边颜色的问题
 
 
 

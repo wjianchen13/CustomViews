@@ -47,6 +47,14 @@
             android:textAllCaps="false"
             android:text="自定义TextView"
             android:onClick="onText"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textAllCaps="false"
+            android:text="描边TextView"
+            android:onClick="onStroke"/>
         
     </LinearLayout> 
 </ScrollView>
