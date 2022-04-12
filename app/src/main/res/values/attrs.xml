@@ -35,5 +35,11 @@
         <attr name="bgColor" format="color"/>
         <attr name="pgColor" format="color"/>
     </declare-styleable>
+
+    <declare-styleable name="TestView">
+        <attr name="tv_stroke_width" format="dimension" />
+        <attr name="android:layout_width"/>
+        <attr name="android:layout_height"/>
+    </declare-styleable>
     
 </resources>

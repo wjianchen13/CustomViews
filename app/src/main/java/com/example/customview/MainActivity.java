@@ -10,6 +10,7 @@ import com.example.customview.audio.AudioActivity;
 import com.example.customview.audio2.Audio2Activity;
 import com.example.customview.check.CheckActivity;
 import com.example.customview.progress.ProgressActivity;
+import com.example.customview.progress2.Progress2Activity;
 import com.example.customview.stroketextview.StrokeActivity;
 import com.example.customview.textview.TextViewActivity;
 import com.example.customview.velocitytracker.VelocitytrackerActivity;
@@ -58,6 +59,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void onCircleProgress(View v) {
         startActivity(new Intent(this, ProgressActivity.class));
+    }
+
+    public void onCircleProgress2(View v) {
+        startActivity(new Intent(this, Progress2Activity.class));
     }
     
 }
