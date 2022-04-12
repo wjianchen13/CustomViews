@@ -12,6 +12,7 @@ import com.example.customview.check.CheckActivity;
 import com.example.customview.praise.PraiseMainActivity;
 import com.example.customview.progress.ProgressActivity;
 import com.example.customview.progress2.Progress2Activity;
+import com.example.customview.star.StarActivity;
 import com.example.customview.stroketextview.StrokeActivity;
 import com.example.customview.swipe.SwipeActivity;
 import com.example.customview.textview.TextViewActivity;
@@ -73,6 +74,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void onSwipe(View v) {
         startActivity(new Intent(this, SwipeActivity.class));
+    }
+
+    public void onStar(View v) {
+        startActivity(new Intent(this, StarActivity.class));
     }
     
 }
