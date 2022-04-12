@@ -63,6 +63,14 @@
             android:textAllCaps="false"
             android:text="AudioView"
             android:onClick="onAudio"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textAllCaps="false"
+            android:text="AudioView2"
+            android:onClick="onAudio2"/>
         
     </LinearLayout> 
 </ScrollView>

@@ -7,6 +7,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.customview.audio.AudioActivity;
+import com.example.customview.audio2.Audio2Activity;
 import com.example.customview.check.CheckActivity;
 import com.example.customview.stroketextview.StrokeActivity;
 import com.example.customview.textview.TextViewActivity;
@@ -48,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void onAudio(View v) {
         startActivity(new Intent(this, AudioActivity.class));
+    }
+    
+    public void onAudio2(View v) {
+        startActivity(new Intent(this, Audio2Activity.class));
     }
     
 }

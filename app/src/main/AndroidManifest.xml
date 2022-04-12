@@ -31,6 +31,8 @@
         <activity android:name=".audio.test.TestActivity"/>
         <activity android:name=".audio.base.BaseActivity"/>
         <activity android:name=".audio.drawabletest.DrawableActivity"/>
+
+        <activity android:name=".audio2.Audio2Activity"/>
         
     </application>
 
