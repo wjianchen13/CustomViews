@@ -13,6 +13,7 @@ import com.example.customview.praise.PraiseMainActivity;
 import com.example.customview.progress.ProgressActivity;
 import com.example.customview.progress2.Progress2Activity;
 import com.example.customview.stroketextview.StrokeActivity;
+import com.example.customview.swipe.SwipeActivity;
 import com.example.customview.textview.TextViewActivity;
 import com.example.customview.velocitytracker.VelocitytrackerActivity;
 import com.example.customview.viewdraghelper.ViewDragHelperActivity;
@@ -69,4 +70,9 @@ public class MainActivity extends AppCompatActivity {
     public void onPraise(View v) {
         startActivity(new Intent(this, PraiseMainActivity.class));
     }
+
+    public void onSwipe(View v) {
+        startActivity(new Intent(this, SwipeActivity.class));
+    }
+    
 }

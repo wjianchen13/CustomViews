@@ -39,7 +39,14 @@
         <activity android:name=".praise.PraiseActivity"/>
         <activity android:name=".praise.PraiseBtnActivity"/>
         <activity android:name=".praise.PraiseMainActivity"/>
-        
+
+        <activity android:name=".swipe.SwipeActivity" />
+        <activity android:name=".swipe.recyclerview.RecyclerViewActivity" />
+        <activity android:name=".swipe.refresh.RefreshActivity" />
+        <activity android:name=".swipe.viewpager.ViewpagerActivity" />
+        <activity android:name=".swipe.customviewpager.CustomViewPagerActivity" />
+
+
     </application>
 
 </manifest>
