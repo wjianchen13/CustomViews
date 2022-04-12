@@ -35,6 +35,10 @@
         <activity android:name=".audio2.Audio2Activity"/>
         <activity android:name=".progress.ProgressActivity"/>
         <activity android:name=".progress2.Progress2Activity"/>
+
+        <activity android:name=".praise.PraiseActivity"/>
+        <activity android:name=".praise.PraiseBtnActivity"/>
+        <activity android:name=".praise.PraiseMainActivity"/>
         
     </application>
 
