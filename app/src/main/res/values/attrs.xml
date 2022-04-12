@@ -29,5 +29,11 @@
         <attr name="indicatorName" format="string"/>
         <attr name="indicatorColor" format="color"/>
     </declare-styleable>
+
+    <declare-styleable name="CircliCornerProgressBar">
+        <attr name="radius" format="dimension" />
+        <attr name="bgColor" format="color"/>
+        <attr name="pgColor" format="color"/>
+    </declare-styleable>
     
 </resources>
