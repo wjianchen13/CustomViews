@@ -26,6 +26,11 @@
         <activity android:name=".check.CheckActivity" />
         <activity android:name=".textview.TextViewActivity" />
         <activity android:name=".stroketextview.StrokeActivity" />
+
+        <activity android:name=".audio.AudioActivity"/>
+        <activity android:name=".audio.test.TestActivity"/>
+        <activity android:name=".audio.base.BaseActivity"/>
+        <activity android:name=".audio.drawabletest.DrawableActivity"/>
         
     </application>
 

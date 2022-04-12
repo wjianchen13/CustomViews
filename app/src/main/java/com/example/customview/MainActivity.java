@@ -6,6 +6,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.customview.audio.AudioActivity;
 import com.example.customview.check.CheckActivity;
 import com.example.customview.stroketextview.StrokeActivity;
 import com.example.customview.textview.TextViewActivity;
@@ -43,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void onStroke(View v) {
         startActivity(new Intent(this, StrokeActivity.class));
+    }
+
+    public void onAudio(View v) {
+        startActivity(new Intent(this, AudioActivity.class));
     }
     
 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CustomView</string>
+    <string name="app_name">CustomViews</string>
     <string name="test"></string>
     <string name="ask">\?</string>
 </resources>

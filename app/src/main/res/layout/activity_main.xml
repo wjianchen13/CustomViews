@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding= "utf-8"?>
 <ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width= "match_parent"
-    android:layout_height= "match_parent"
-    >
+    android:layout_height= "match_parent" >
+    
     <LinearLayout 
         android:layout_width= "match_parent"
         android:layout_height= "match_parent"
@@ -55,6 +55,14 @@
             android:textAllCaps="false"
             android:text="描边TextView"
             android:onClick="onStroke"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textAllCaps="false"
+            android:text="AudioView"
+            android:onClick="onAudio"/>
         
     </LinearLayout> 
 </ScrollView>
