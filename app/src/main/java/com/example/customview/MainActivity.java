@@ -18,7 +18,6 @@ import com.example.customview.swipe.SwipeActivity;
 import com.example.customview.textview.TextViewActivity;
 import com.example.customview.velocitytracker.VelocitytrackerActivity;
 import com.example.customview.viewdraghelper.ViewDragHelperActivity;
-import com.example.customview.viewpager.ViewPagerActivity;
 
 public class MainActivity extends AppCompatActivity {
     
@@ -26,10 +25,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
-    
-    public void onViewPager(View v) {
-        startActivity(new Intent(this, ViewPagerActivity.class));
     }
 
     public void onViewDragHelper(View v) {
