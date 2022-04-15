@@ -9,6 +9,7 @@
     <declare-styleable name="CenterStrokeTextView">
         <attr name="stroke_color" format="color"/>
         <attr name="stroke_width" format="dimension"/>
+        <attr name="stroke_bold" format="boolean"/>
         <attr name="font_type" format="enum">
             <enum name="DINMittelschrift_Alternate" value="1"/>
             <enum name="Refrigerator_Deluxe_Heavy" value="2"/>

@@ -19,6 +19,7 @@ public class MyStrokeTextView extends AppCompatTextView {
     private int mStrokeWidth = 0;       //描边宽度
     private int mFontType=-1;
     private Paint mPaint ;      //画笔
+    private boolean isBold; // 是否粗体
 
     public MyStrokeTextView(Context context) {
         super(context);
@@ -41,6 +42,7 @@ public class MyStrokeTextView extends AppCompatTextView {
             mStrokeColor = a.getColor(R.styleable.CenterStrokeTextView_stroke_color, Color.BLACK);
             mStrokeWidth = a.getDimensionPixelSize(R.styleable.CenterStrokeTextView_stroke_width, 0);
             mFontType = a.getInt(R.styleable.CenterStrokeTextView_font_type, -1);
+            isBold = a.getBoolean(R.styleable.CenterStrokeTextView_stroke_bold, false);
             switch (mFontType){
                 case 1:
                     mPaint.setTypeface(FontUtils.getTypeFace(getContext(), FontUtils.FontType.DIN_MITTELSCHRIFT_ALTERNATE));
@@ -65,9 +67,9 @@ public class MyStrokeTextView extends AppCompatTextView {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         final ColorStateList currentColor = getTextColors();
-//        mPaint.setFakeBoldText(true);   //设置粗体
+        mPaint.setFakeBoldText(isBold);   //设置粗体
         mPaint.setStyle(Paint.Style.STROKE);
-//        //设置结合处
+        //设置结合处
         mPaint.setStrokeJoin(Paint.Join.ROUND);
         mPaint.setStrokeWidth(mStrokeWidth);
         setTextColor(mStrokeColor);

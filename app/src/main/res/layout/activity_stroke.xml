@@ -69,13 +69,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:stroke_color="#4d69ff"
-            app:stroke_width="4dp"
+            app:stroke_width="1dp"
             android:textColor="#c51162"
             android:layout_marginTop="10dp"
-            app:font_type="Refrigerator_Deluxe_Heavy"
-            android:text="123456789"
+            app:stroke_bold="false"
+            android:text="A123456789"
             android:textSize="30sp"
             android:background="#DD999999"
             />
+
+        <com.example.customview.stroketextview.StrokeTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_marginTop="10dp"
+            android:text="A123456789"
+            android:textSize="30sp"
+            android:background="#DD999999"
+            />
+        
     </LinearLayout>
 </ScrollView>
