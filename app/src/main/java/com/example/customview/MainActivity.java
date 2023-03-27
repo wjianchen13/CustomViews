@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.customview.audio.AudioActivity;
 import com.example.customview.audio2.Audio2Activity;
 import com.example.customview.check.CheckActivity;
+import com.example.customview.dynamic_add.DynamicAddActivity;
 import com.example.customview.praise.PraiseMainActivity;
 import com.example.customview.progress.ProgressActivity;
 import com.example.customview.progress2.Progress2Activity;
@@ -74,5 +75,8 @@ public class MainActivity extends AppCompatActivity {
     public void onStar(View v) {
         startActivity(new Intent(this, StarActivity.class));
     }
-    
+
+    public void onLinearLayoutAdd(View v) {
+        startActivity(new Intent(this, DynamicAddActivity.class));
+    }
 }

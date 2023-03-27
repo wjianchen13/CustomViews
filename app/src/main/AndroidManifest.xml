@@ -46,6 +46,7 @@
         <activity android:name=".swipe.viewpager.ViewpagerActivity" />
         <activity android:name=".swipe.customviewpager.CustomViewPagerActivity" />
         <activity android:name=".star.StarActivity" />
+        <activity android:name=".dynamic_add.DynamicAddActivity" />
 
     </application>
 

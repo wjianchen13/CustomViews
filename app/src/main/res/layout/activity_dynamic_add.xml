@@ -1,0 +1,12 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff00ff00"
+    android:orientation="vertical">
+
+    <com.example.customview.dynamic_add.DynamicAddView
+        android:id="@+id/dv"
+        android:layout_width="match_parent"
+        android:layout_height="26dp" />
+
+</LinearLayout>
