@@ -14,6 +14,7 @@ import com.example.customview.praise.PraiseMainActivity;
 import com.example.customview.progress.ProgressActivity;
 import com.example.customview.progress2.Progress2Activity;
 import com.example.customview.star.StarActivity;
+import com.example.customview.stoke.StokeTextViewActivity;
 import com.example.customview.stroketextview.StrokeActivity;
 import com.example.customview.swipe.SwipeActivity;
 import com.example.customview.textview.TextViewActivity;
@@ -78,5 +79,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void onLinearLayoutAdd(View v) {
         startActivity(new Intent(this, DynamicAddActivity.class));
+    }
+
+    public void onStoke(View v) {
+        startActivity(new Intent(this, StokeTextViewActivity.class));
     }
 }

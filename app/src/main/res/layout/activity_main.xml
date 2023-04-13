@@ -111,6 +111,15 @@
             android:textAllCaps="false"
             android:text="LinearLayout 动态添加View"
             android:onClick="onLinearLayoutAdd"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textAllCaps="false"
+            android:text="TextView 渐变描边阴影"
+            android:onClick="onStoke"/>
         
     </LinearLayout> 
 </ScrollView>
