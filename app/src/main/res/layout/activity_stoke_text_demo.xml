@@ -19,6 +19,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textStyle="bold"
+            android:textColor="#FF0000"
             android:text="NAME"
             android:textSize="30sp"
             app:isGradient="true"
@@ -30,6 +31,7 @@
             app:shadowY="1"
             app:useTypeface="false" />
 
+<!--
         <com.example.customview.stoke.VipTextView
             android:id="@+id/tv_test2"
             android:layout_width="0dp"
@@ -69,10 +71,11 @@
             app:shadowY="1"
             app:startColor="#ff0000"
             app:useTypeface="false" />
+-->
 
     </LinearLayout>
 
-    <LinearLayout
+<!--    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/llyt_frame"
@@ -138,7 +141,33 @@
             app:startColor="#ff0000"
             app:useTypeface="false" />
 
-    </LinearLayout>
+    </LinearLayout>-->
 
+    <Button
+        android:id="@+id/btn_change1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="改变数据1"
+        android:onClick="onTest1"
+        android:layout_alignParentBottom="true"/>
+
+    <Button
+        android:id="@+id/btn_change2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="改变数据2"
+        android:onClick="onTest2"
+        android:layout_above="@id/btn_change1"/>
+
+    <Button
+        android:id="@+id/btn_change3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="改变数据3"
+        android:onClick="onTest3"
+        android:layout_above="@id/btn_change2"/>
 
 </RelativeLayout>

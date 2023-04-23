@@ -34,6 +34,7 @@ public class VipTextView extends androidx.appcompat.widget.AppCompatTextView {
     private int shadowColor;
     private TextView backGroundText;
     private LinearGradient mLinearGradient;
+    private boolean isVipStyle;
 
     public VipTextView(Context context) {
         super(context);
@@ -66,40 +67,46 @@ public class VipTextView extends androidx.appcompat.widget.AppCompatTextView {
     }
 
     public void setLevel(int level) {
-        isGradient = true;
-        isStroke = false;
-        isVertical = true;
-        isShadow = true;
-        shadowRadius = 8;
-        shadowX = 1;
-        shadowY = 1;
-        useTypeface = false;
-        if(level == 1) {
-            startColor = ContextCompat.getColor(mContext, R.color.c51cc91);
-            endColor= ContextCompat.getColor(mContext, R.color.cbef2f5);
-            shadowColor = ContextCompat.getColor(mContext, R.color.c995affd7);
-        } else if(level == 2) {
-            startColor = ContextCompat.getColor(mContext, R.color.c165cc5);
-            endColor= ContextCompat.getColor(mContext, R.color.cbfd5fb);
-            shadowColor = ContextCompat.getColor(mContext, R.color.c995585FF);
-        } else if(level == 3) {
-            startColor = ContextCompat.getColor(mContext, R.color.cff6262);
-            endColor= ContextCompat.getColor(mContext, R.color.cffa0b7);
-            shadowColor = ContextCompat.getColor(mContext, R.color.c3964ff);
-        } else if(level == 4) {
-            startColor = ContextCompat.getColor(mContext, R.color.cffa318);
-            endColor= ContextCompat.getColor(mContext, R.color.cffdcbc);
-            shadowColor = ContextCompat.getColor(mContext, R.color.cffbe54);
-        } else if(level == 5) {
-            startColor = ContextCompat.getColor(mContext, R.color.c5278ff);
-            endColor= ContextCompat.getColor(mContext, R.color.caa8afe);
-            shadowColor = ContextCompat.getColor(mContext, R.color.cc854ff);
-        } else if(level == 6) {
-            startColor = ContextCompat.getColor(mContext, R.color.cff4040);
-            endColor= ContextCompat.getColor(mContext, R.color.cffa740);
-            shadowColor = ContextCompat.getColor(mContext, R.color.cff6838);
+        if(level <= 0) {
+            isVipStyle = false;
+        } else {
+            isVipStyle = true;
+            isGradient = true;
+            isStroke = false;
+            isVertical = true;
+            isShadow = true;
+            shadowRadius = 8;
+            shadowX = 1;
+            shadowY = 1;
+            useTypeface = false;
+            if (level == 1) {
+                startColor = ContextCompat.getColor(mContext, R.color.c51cc91);
+                endColor = ContextCompat.getColor(mContext, R.color.cbef2f5);
+                shadowColor = ContextCompat.getColor(mContext, R.color.c995affd7);
+            } else if (level == 2) {
+                startColor = ContextCompat.getColor(mContext, R.color.c165cc5);
+                endColor = ContextCompat.getColor(mContext, R.color.cbfd5fb);
+                shadowColor = ContextCompat.getColor(mContext, R.color.c995585FF);
+            } else if (level == 3) {
+                startColor = ContextCompat.getColor(mContext, R.color.cff6262);
+                endColor = ContextCompat.getColor(mContext, R.color.cffa0b7);
+                shadowColor = ContextCompat.getColor(mContext, R.color.c3964ff);
+            } else if (level == 4) {
+                startColor = ContextCompat.getColor(mContext, R.color.cffa318);
+                endColor = ContextCompat.getColor(mContext, R.color.cffdcbc);
+                shadowColor = ContextCompat.getColor(mContext, R.color.cffbe54);
+            } else if (level == 5) {
+                startColor = ContextCompat.getColor(mContext, R.color.c5278ff);
+                endColor = ContextCompat.getColor(mContext, R.color.caa8afe);
+                shadowColor = ContextCompat.getColor(mContext, R.color.cc854ff);
+            } else if (level == 6) {
+                startColor = ContextCompat.getColor(mContext, R.color.cff4040);
+                endColor = ContextCompat.getColor(mContext, R.color.cffa740);
+                shadowColor = ContextCompat.getColor(mContext, R.color.cff6838);
+            }
         }
         requestLayout();
+        invalidate();
     }
 
     private void initAttrs(Context context, AttributeSet attrs) {
@@ -160,29 +167,39 @@ public class VipTextView extends androidx.appcompat.widget.AppCompatTextView {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        if (isShadow) {
-            getPaint().setShadowLayer(shadowRadius, shadowX, shadowY, shadowColor);
-            getPaint().setShader(null);
-            super.onDraw(canvas);
+        if(isVipStyle) {
+            if (isGradient) {
+                if (isShadow) {
+                    getPaint().setShadowLayer(shadowRadius, shadowX, shadowY, shadowColor);
+                    getPaint().setShader(null);
+                    super.onDraw(canvas);
 
-            getPaint().clearShadowLayer();
-            getPaint().setShader(mLinearGradient);
-            super.onDraw(canvas);
-        } else {
-            if (isStroke) {
-                if (backGroundText != null) {
-                    CharSequence tt = backGroundText.getText();
-                    if (tt == null || !tt.equals(this.getText())) {
-                        backGroundText.setText(getText());
-                        this.postInvalidate();
+                    getPaint().clearShadowLayer();
+                    getPaint().setShader(mLinearGradient);
+                    super.onDraw(canvas);
+                } else {
+                    if (isStroke) {
+                        if (backGroundText != null) {
+                            CharSequence tt = backGroundText.getText();
+                            if (tt == null || !tt.equals(this.getText())) {
+                                backGroundText.setText(getText());
+                                this.postInvalidate();
+                            }
+                        }
+                        backGroundText.draw(canvas);
+                    }
+                    if (isGradient) {
+                        this.getPaint().setShader(mLinearGradient);
                     }
                 }
-                backGroundText.draw(canvas);
             }
-            if (isGradient) {
-                this.getPaint().setShader(mLinearGradient);
-            }
+        } else {
+
+            getPaint().clearShadowLayer();
+            getPaint().setShader(null);
+            super.onDraw(canvas);
         }
+
         super.onDraw(canvas);
     }
 }
