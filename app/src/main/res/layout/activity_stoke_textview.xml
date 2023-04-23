@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical" >
 
     <com.example.customview.stoke.StokeTextView
         android:id="@+id/tv_test"
@@ -12,18 +12,17 @@
         android:gravity="center"
         android:text="12:45"
         android:textSize="30sp"
-        app:endColor="#00ff00"
+        app:endColor="#ffffff"
         app:isGradient="true"
         app:isStroke="false"
         app:isVertical="true"
         app:isShadow="true"
         app:shadowColor="#0000ff"
-        app:shadowRadius="10"
+        app:shadowRadius="8"
         app:shadowX="1"
         app:shadowY="1"
         app:startColor="#ff0000"
-        app:useTypeface="false"
-        />
+        app:useTypeface="false" />
 
     <com.example.customview.stoke.StrokeTextView1
         android:id="@+id/tv_test1"
@@ -54,16 +53,36 @@
         app:strokeJoinStyle="miter"
         app:strokeWidth1="5"
         android:text="Sample" />
-    
+
+    <com.example.customview.stoke.StokeTextView
+        android:id="@+id/tv_test3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_test2"
+        android:gravity="center"
+        android:text="NAME"
+        android:textSize="30sp"
+        app:endColor="#ffffff"
+        app:isGradient="true"
+        app:isStroke="false"
+        app:isVertical="true"
+        app:isShadow="true"
+        app:shadowColor="#0000ff"
+        app:shadowRadius="8"
+        app:shadowX="1"
+        app:shadowY="1"
+        app:startColor="#ff0000"
+        app:useTypeface="false" />
+
     <Button
         android:id="@+id/btn_test1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="test1"
-        android:textAllCaps="false"
-        android:onClick="onTest1"
         android:layout_alignParentBottom="true"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:onClick="onTest1"
+        android:text="test1"
+        android:textAllCaps="false" />
 
     <Button
         android:id="@+id/btn_test2"
@@ -74,5 +93,29 @@
         android:onClick="onTest2"
         android:layout_above="@id/btn_test1"
         android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btn_test3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="test3"
+        android:textAllCaps="false"
+        android:onClick="onTest3"
+        android:layout_above="@id/btn_test2"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/imgv_test"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_above="@id/btn_test3" />
+
+    <LinearLayout
+        android:id="@+id/llyt_test"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_above="@id/imgv_test"
+        android:orientation="vertical"
+        android:background="#ff00ff00"/>
 
 </RelativeLayout>

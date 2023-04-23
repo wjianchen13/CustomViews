@@ -1,14 +1,22 @@
 package com.example.customview.stoke;
 
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.customview.R;
-import com.example.customview.textview.MyTextView;
 
 /**
  * TextView描边、渐变、阴影效果
@@ -23,6 +31,9 @@ public class StokeTextViewActivity extends AppCompatActivity {
     
     private StokeTextView tvTest;
     private StrokeTextView1 tvTest1;
+    private ImageView imgvTest;
+    private LinearLayout llytTest;
+    private StokeTextView tvTest3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,17 +41,59 @@ public class StokeTextViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_stoke_textview);
         tvTest = findViewById(R.id.tv_test);
         tvTest1 = findViewById(R.id.tv_test1);
+        tvTest3 = findViewById(R.id.tv_test3);
+        imgvTest = findViewById(R.id.imgv_test);
+        llytTest = findViewById(R.id.llyt_test);
         tvTest1.setShadowLayer(8,0,0, Color.BLUE);
     }
 
     public void onTest1(View v) {
-        
-        
+//        tvTest.setDrawingCacheEnabled(true);
+//        tvTest.measure(View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED), View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
+//        tvTest.layout(0, 0, tvTest.getMeasuredWidth(), tvTest.getMeasuredHeight());
+//        Bitmap bitmap = tvTest.getDrawingCache();
+//        imgvTest.setBackground(new BitmapDrawable(getResources(), bitmap));
+
     }
 
+    /**
+     * 从TextView生成一张bitmap并显示出来
+     * @param v
+     */
     public void onTest2(View v) {
+        imgvTest.setBackground(createDefaultDrawable(this, "12:45"));
+    }
 
+    /**
+     * 跳转到具体demo使用例子，可以查看效果
+     * @param v
+     */
+    public void onTest3(View v) {
+//        tvTest3.setLevel();
+//        tvTest3.setText("HELLO");
+        startActivity(new Intent(this, StokeTextDemoActivity.class));
+    }
 
+    private @NonNull
+    Drawable createDefaultDrawable(Context context, String name){
+        StokeTextView_bak emTextView = new StokeTextView_bak(context);
+        emTextView.setDrawingCacheEnabled(true);
+        int textSize = 28;
+        emTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
+
+        emTextView.setGravity(Gravity.CENTER);
+        emTextView.setIncludeFontPadding(false);
+        emTextView.setText(name);
+
+        emTextView.measure(View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED)
+                , View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
+
+        emTextView.layout(0, 0, emTextView.getMeasuredWidth(), emTextView.getMeasuredHeight());
+        Bitmap levelCache = Bitmap.createBitmap(emTextView.getDrawingCache(), 0, 0, emTextView.getMeasuredWidth(), emTextView.getMeasuredHeight());
+        emTextView.setDrawingCacheEnabled(false);
+        emTextView.destroyDrawingCache();
+
+        return new BitmapDrawable(context.getResources(), levelCache);
     }
     
 }

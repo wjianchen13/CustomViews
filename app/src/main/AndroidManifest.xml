@@ -48,6 +48,8 @@
         <activity android:name=".star.StarActivity" />
         <activity android:name=".dynamic_add.DynamicAddActivity" />
         <activity android:name=".stoke.StokeTextViewActivity" />
+        <activity android:name=".stoke.StokeTextDemoActivity" />
+
 
     </application>
 

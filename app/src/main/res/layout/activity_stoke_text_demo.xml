@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/llyt_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <com.example.customview.stoke.VipTextView
+            android:id="@+id/tv_test1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="NAME"
+            android:textSize="30sp"
+            app:isGradient="true"
+            app:isStroke="false"
+            app:isVertical="true"
+            app:isShadow="true"
+            app:shadowRadius="8"
+            app:shadowX="1"
+            app:shadowY="1"
+            app:useTypeface="false" />
+
+        <com.example.customview.stoke.VipTextView
+            android:id="@+id/tv_test2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="NAME"
+            android:textSize="30sp"
+            app:endColor="#ffffff"
+            app:isGradient="true"
+            app:isStroke="false"
+            app:isVertical="true"
+            app:isShadow="true"
+            app:shadowColor="#0000ff"
+            app:shadowRadius="8"
+            app:shadowX="1"
+            app:shadowY="1"
+            app:startColor="#ff0000"
+            app:useTypeface="false" />
+
+        <com.example.customview.stoke.VipTextView
+            android:id="@+id/tv_test3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="NAME"
+            android:textSize="30sp"
+            app:endColor="#ffffff"
+            app:isGradient="true"
+            app:isStroke="false"
+            app:isVertical="true"
+            app:isShadow="true"
+            app:shadowColor="#0000ff"
+            app:shadowRadius="8"
+            app:shadowX="1"
+            app:shadowY="1"
+            app:startColor="#ff0000"
+            app:useTypeface="false" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llyt_frame"
+        android:orientation="horizontal" >
+
+        <com.example.customview.stoke.VipTextView
+            android:id="@+id/tv_test4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="NAME"
+            android:textSize="30sp"
+            app:endColor="#ffffff"
+            app:isGradient="true"
+            app:isStroke="false"
+            app:isVertical="true"
+            app:isShadow="true"
+            app:shadowColor="#0000ff"
+            app:shadowRadius="6"
+            app:shadowX="1"
+            app:shadowY="1"
+            app:startColor="#ff0000"
+            app:useTypeface="false" />
+
+        <com.example.customview.stoke.VipTextView
+            android:id="@+id/tv_test5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="NAME"
+            android:textSize="30sp"
+            app:endColor="#ffffff"
+            app:isGradient="true"
+            app:isStroke="false"
+            app:isVertical="true"
+            app:isShadow="true"
+            app:shadowColor="#0000ff"
+            app:shadowRadius="6"
+            app:shadowX="1"
+            app:shadowY="1"
+            app:startColor="#ff0000"
+            app:useTypeface="false" />
+
+        <com.example.customview.stoke.VipTextView
+            android:id="@+id/tv_test6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="NAME"
+            android:textSize="30sp"
+            app:endColor="#ffffff"
+            app:isGradient="true"
+            app:isStroke="false"
+            app:isVertical="true"
+            app:isShadow="true"
+            app:shadowColor="#0000ff"
+            app:shadowRadius="6"
+            app:shadowX="1"
+            app:shadowY="1"
+            app:startColor="#ff0000"
+            app:useTypeface="false" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

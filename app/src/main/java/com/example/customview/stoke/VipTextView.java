@@ -12,10 +12,11 @@ import android.util.AttributeSet;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 
 import com.example.customview.R;
 
-public class StokeTextView extends androidx.appcompat.widget.AppCompatTextView {
+public class VipTextView extends androidx.appcompat.widget.AppCompatTextView {
 
     private Context mContext;
     private int startColor;
@@ -34,8 +35,9 @@ public class StokeTextView extends androidx.appcompat.widget.AppCompatTextView {
     private TextView backGroundText;
     private LinearGradient mLinearGradient;
 
-    public StokeTextView(Context context) {
+    public VipTextView(Context context) {
         super(context);
+        this.mContext = context;
         endColor= Color.WHITE;
         isGradient = true;
         isStroke = false;
@@ -51,30 +53,53 @@ public class StokeTextView extends androidx.appcompat.widget.AppCompatTextView {
 
     }
 
-    public StokeTextView(Context context, @Nullable AttributeSet attrs) {
+    public VipTextView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        this.mContext = context;
         initAttrs(context, attrs);
     }
 
-    public StokeTextView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public VipTextView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        this.mContext = context;
         initAttrs(context, attrs);
     }
 
-    public void setLevel() {
-        endColor= Color.WHITE;
+    public void setLevel(int level) {
         isGradient = true;
         isStroke = false;
         isVertical = true;
         isShadow = true;
-        shadowColor = Color.RED;
         shadowRadius = 8;
         shadowX = 1;
         shadowY = 1;
-        startColor = Color.GREEN;
         useTypeface = false;
-//        requestLayout();
-        init2();
+        if(level == 1) {
+            startColor = ContextCompat.getColor(mContext, R.color.c51cc91);
+            endColor= ContextCompat.getColor(mContext, R.color.cbef2f5);
+            shadowColor = ContextCompat.getColor(mContext, R.color.c995affd7);
+        } else if(level == 2) {
+            startColor = ContextCompat.getColor(mContext, R.color.c165cc5);
+            endColor= ContextCompat.getColor(mContext, R.color.cbfd5fb);
+            shadowColor = ContextCompat.getColor(mContext, R.color.c995585FF);
+        } else if(level == 3) {
+            startColor = ContextCompat.getColor(mContext, R.color.cff6262);
+            endColor= ContextCompat.getColor(mContext, R.color.cffa0b7);
+            shadowColor = ContextCompat.getColor(mContext, R.color.c3964ff);
+        } else if(level == 4) {
+            startColor = ContextCompat.getColor(mContext, R.color.cffa318);
+            endColor= ContextCompat.getColor(mContext, R.color.cffdcbc);
+            shadowColor = ContextCompat.getColor(mContext, R.color.cffbe54);
+        } else if(level == 5) {
+            startColor = ContextCompat.getColor(mContext, R.color.c5278ff);
+            endColor= ContextCompat.getColor(mContext, R.color.caa8afe);
+            shadowColor = ContextCompat.getColor(mContext, R.color.cc854ff);
+        } else if(level == 6) {
+            startColor = ContextCompat.getColor(mContext, R.color.cff4040);
+            endColor= ContextCompat.getColor(mContext, R.color.cffa740);
+            shadowColor = ContextCompat.getColor(mContext, R.color.cff6838);
+        }
+        requestLayout();
     }
 
     private void initAttrs(Context context, AttributeSet attrs) {
@@ -106,7 +131,6 @@ public class StokeTextView extends androidx.appcompat.widget.AppCompatTextView {
             backGroundText.setTextColor(strokeColor);
             backGroundText.setGravity(getGravity());
         }
-
     }
 
     @Override
@@ -119,8 +143,8 @@ public class StokeTextView extends androidx.appcompat.widget.AppCompatTextView {
 
         if (isGradient) {
             if (isVertical) {
-                mLinearGradient = new LinearGradient(0, 0, 0,
-                        getMeasuredHeight() ,
+                mLinearGradient = new LinearGradient(0, 15, 0,
+                        getMeasuredHeight() - 20,
                         startColor,
                         endColor,
                         Shader.TileMode.CLAMP);

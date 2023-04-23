@@ -15,7 +15,7 @@ import androidx.annotation.Nullable;
 
 import com.example.customview.R;
 
-public class StokeTextView extends androidx.appcompat.widget.AppCompatTextView {
+public class StokeTextView_bak extends androidx.appcompat.widget.AppCompatTextView {
 
     private Context mContext;
     private int startColor;
@@ -34,7 +34,7 @@ public class StokeTextView extends androidx.appcompat.widget.AppCompatTextView {
     private TextView backGroundText;
     private LinearGradient mLinearGradient;
 
-    public StokeTextView(Context context) {
+    public StokeTextView_bak(Context context) {
         super(context);
         endColor= Color.WHITE;
         isGradient = true;
@@ -51,30 +51,14 @@ public class StokeTextView extends androidx.appcompat.widget.AppCompatTextView {
 
     }
 
-    public StokeTextView(Context context, @Nullable AttributeSet attrs) {
+    public StokeTextView_bak(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         initAttrs(context, attrs);
     }
 
-    public StokeTextView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public StokeTextView_bak(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initAttrs(context, attrs);
-    }
-
-    public void setLevel() {
-        endColor= Color.WHITE;
-        isGradient = true;
-        isStroke = false;
-        isVertical = true;
-        isShadow = true;
-        shadowColor = Color.RED;
-        shadowRadius = 8;
-        shadowX = 1;
-        shadowY = 1;
-        startColor = Color.GREEN;
-        useTypeface = false;
-//        requestLayout();
-        init2();
     }
 
     private void initAttrs(Context context, AttributeSet attrs) {
