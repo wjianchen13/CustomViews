@@ -170,9 +170,9 @@ public class VipTextView extends androidx.appcompat.widget.AppCompatTextView {
         if(isVipStyle) {
             if (isGradient) {
                 if (isShadow) {
-                    getPaint().setShadowLayer(shadowRadius, shadowX, shadowY, shadowColor);
-                    getPaint().setShader(null);
-                    super.onDraw(canvas);
+//                    getPaint().setShadowLayer(shadowRadius, shadowX, shadowY, shadowColor);
+//                    getPaint().setShader(null);
+//                    super.onDraw(canvas);
 
                     getPaint().clearShadowLayer();
                     getPaint().setShader(mLinearGradient);
