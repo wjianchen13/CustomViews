@@ -7,7 +7,7 @@ import android.view.MotionEvent;
 
 import androidx.annotation.RequiresApi;
 
-import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+import com.scwang.smart.refresh.layout.SmartRefreshLayout;
 
 /**
  * Created by Administrator on 2018/5/25.
@@ -21,15 +21,6 @@ public class MySmartRefreshLayout extends SmartRefreshLayout {
 
     public MySmartRefreshLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
-    }
-
-    public MySmartRefreshLayout(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-    }
-
-    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
-    public MySmartRefreshLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
     }
 
     @Override

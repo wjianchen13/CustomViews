@@ -1,5 +1,10 @@
 # 自定义控件全部集合
 
+# 编译环境
+android-studio-2024.3.2.15
+gradle插件：8.10.1
+gradle版本：gradle-8.11.1-bin
+
 # viewpager
 viewpager和列表，列表侧滑删除组合使用，最开始用在消息系统列表里  
 

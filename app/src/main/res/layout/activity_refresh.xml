@@ -9,8 +9,7 @@
     <com.example.customview.viewpager.view.MySmartRefreshLayout
         android:id="@+id/smart_refreshlayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:srlEnableAutoLoadmore="false">
+        android:layout_height="match_parent" >
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/smart_recyclerview"
@@ -18,7 +17,7 @@
             android:layout_height="match_parent"
             android:background="#efefef"/>
 
-        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+        <com.scwang.smart.refresh.header.ClassicsHeader
             android:id="@+id/smart_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -27,7 +26,7 @@
             app:srlTextSizeTime="12sp"
             app:srlTextSizeTitle="13sp"/>
 
-        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+        <com.scwang.smart.refresh.footer.ClassicsFooter
             android:id="@+id/smart_footer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

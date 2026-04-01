@@ -9,9 +9,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.customview.R;
 import com.example.customview.swipe.bean.SwipeBean;
-import com.scwang.smartrefresh.layout.SmartRefreshLayout;
-import com.scwang.smartrefresh.layout.api.RefreshLayout;
-import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
+import com.scwang.smart.refresh.layout.SmartRefreshLayout;
+import com.scwang.smart.refresh.layout.api.RefreshLayout;
+import com.scwang.smart.refresh.layout.listener.OnRefreshListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,8 +27,8 @@ public class RefreshActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_swipe_refresh);
         mSmartRefreshLayout = (SmartRefreshLayout) findViewById(R.id.smart_refreshlayout);
-        mSmartRefreshLayout.setEnableLoadmore(true);
-//        mSmartRefreshLayout.setEnableLoadmore(false);
+        mSmartRefreshLayout.setEnableLoadMore(true);
+//        mSmartRefreshLayout.setEnableLoadMore(false);
 //        mSmartRefreshLayout.setHeaderMaxDragRate(5);
 //        mSmartRefreshLayout.setReboundDuration(3000);//回弹动画时长（毫秒）
 //        mSmartRefreshLayout.setEnablePureScrollMode(true);
