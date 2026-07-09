@@ -10,6 +10,7 @@ import com.example.customview.audio.AudioActivity;
 import com.example.customview.audio2.Audio2Activity;
 import com.example.customview.check.CheckActivity;
 import com.example.customview.dynamic_add.DynamicAddActivity;
+import com.example.customview.inner_stroke.InnerStokeActivity;
 import com.example.customview.praise.PraiseMainActivity;
 import com.example.customview.progress.ProgressActivity;
 import com.example.customview.progress2.Progress2Activity;
@@ -84,4 +85,10 @@ public class MainActivity extends AppCompatActivity {
     public void onStoke(View v) {
         startActivity(new Intent(this, StokeTextViewActivity.class));
     }
+
+    public void onInnerStoke(View v) {
+        startActivity(new Intent(this, InnerStokeActivity.class));
+    }
+
+
 }
